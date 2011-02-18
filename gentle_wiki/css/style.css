@@ -1,0 +1,47 @@
+/*
+
+	project: ILC shit
+	author: Andrew
+*/
+
+/* global reset */
+:link,:visited { text-decoration:none } :focus, :active { outline: 0 } ul,ol { list-style:none } h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; } ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin:0; padding:0 } a img,:link img,:visited img { border:none } address { font-style:normal }
+body { font: .74em Arial, Sans-Serif; background: #f78d47 url(../images/bg.gif) repeat-x; color: #333; line-height: 1.6em; }
+a { color: #752B7D; text-decoration: underline; }
+a:hover { color: #808080; }
+p  { margin: 5px 0 15px;}
+h2 { background: url(../images/bullet.gif) no-repeat left 6px; font-size: 1.2em; padding: 0 0 0 9px; }
+h2 a { text-decoration: underline; }
+h1 { font: 2.3em Georgia; margin: 0 0 22px; }
+h1 a { color: #fff; }
+h1 a:hover { color: #CFA5D3; }
+.clear { clear: both; }
+.wrap { margin: 25px auto; width: 880px; }
+
+#options { float: right; color: #E6E8B1; font-weight: bold; }
+	#options a { color: #E6E8B1; padding: 0 0 0 8px; background: url(../images/bullet.gif) no-repeat left 5px; margin: 0 0 0 10px; }
+	#options a:hover { color: #E6E8B1; }
+
+#menu { float: left; margin: 0 0 40px; }
+#menu li { display: inline; }
+#menu li a { float: left; padding: 8px 30px; margin: 0 1px 0 0; color: #E6E8B1; background: #FF6600;  }
+	#menu li a:hover { color: #fff; background: #983d00; }
+
+#menu #nav a {background: #983d00;}
+
+
+#selected li a { color: #983d00; background: #983d00; }
+
+#left { float: left; width: 600px; margin: 0 0 40px; }
+#right { float: right; width: 270px; margin: 0 0 40px; background: #fff; border: 1px solid #D1AFD5; padding: 1px; }
+	.box { background: #983d00; border-bottom: 1px solid #D1AFD5; border-right: 1px solid #D1AFD5; color: #E6E8B1; padding: 15px; }
+	.box h3 { margin: 0 0 10px; }
+	.box p { margin: 0; }
+
+#footer { clear: both; border-top: 5px solid #323232; background: #393939 url(../images/footerbg.gif) repeat-x bottom; color: #808080; padding: 10px 0; }
+	#footer ul { float: left; width: 200px; }
+	#footer li { padding: 5px 8px; background: url(../images/dot.gif) repeat-x bottom; }
+		#footer li a { color: #CB799F; }
+		#footer li a:hover { color: #F5CFE1; }
+	#footer #col { float: right; width: 600px;   }
+	#copyright { background: url(../images/dot.gif) repeat-x top; padding: 24px 0 0; font-size: .9em; }
