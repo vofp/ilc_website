@@ -1,12 +1,9 @@
-<h1><%= link_to 'Listing users', User %></h1>
+<div id="left">
+	<h1>Listing users</h1>
 
-<% @users.each do |user| %>
-    <h2><%= link_to user.name, user %></h2>
-    <p><%= user.description %></p>
-  </tr>
-<% end %>
-</table>
+	<% @users.each do |user| %>
+		<h2><%= link_to user.name, user %></h2>
+		<p><%= user.description %></p>
+	<% end %>
+</div>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>

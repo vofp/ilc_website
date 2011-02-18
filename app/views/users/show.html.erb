@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
+<div id="left">
+	<h1><%= @user.name %></h1>
+	<h2>Projects working on:</h2>
+	<% @user.projects.each do |project| %>
+		<p><%= link_to project.name, project %>: <%= project.description %></p>
+	<% end %>
+	<br/>
+	<h2>Recent Blogs</h2>
+	<% @user.blogs.each do |blog| %>
+		<h3><%= blog.name %></h3>
+		<p><%= blog.message %></p>
+	<% end %>
+</div>
+<div id="right">
+	<div class="box">
+		<h3>About <%= @user.name%></h3>
+		<p><%= @user.description %></p>
+	</div>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @user.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
