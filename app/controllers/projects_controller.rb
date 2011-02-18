@@ -1,5 +1,14 @@
 class ProjectsController < ApplicationController
-  # GET /projects
+  def main
+		@project = Project.find(1)
+
+		respond_to do |format|
+			format.html{ redirect_to(@project)}
+		end
+	end
+
+
+	# GET /projects
   # GET /projects.xml
   def index
     @projects = Project.all

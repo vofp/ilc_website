@@ -1,20 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div id="left">
+	<p id="notice"><%= notice %></p>
+	<h1><%= @project.name %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @project.url %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+	<% @project.blogs.each do |blog| %>
+		<h2><%= blog.name %></h2>
+		<p><%= blog.message %></p>
+	<% end %>
+</div>
+<div id="right">
+	<div class="box">
+		<h3>About <%= @project.name %></h3>
+		<p><%= @project.description %></p>
+	</div>
+</div>

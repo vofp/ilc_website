@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  message: MyText
+  name: First!
+  message: I was the First to blog!!! yay...
 
 two:
-  name: MyString
-  message: MyText
+  name: Welcome
+  message: Welcome to the ILC website made by Andrew and Francis.

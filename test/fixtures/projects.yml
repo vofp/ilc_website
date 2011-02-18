@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyText
-  url: MyString
+mainpage:
+  name: Main Page
+  description: Main page of website
+  url: here
 
-two:
-  name: MyString
-  description: MyText
-  url: MyString
+blog:
+  name: Blog
+  description: Blog
+  url: close by

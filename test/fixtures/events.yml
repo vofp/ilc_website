@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
+  name: Programming night
+  description: Night of Programming
   url: MyString
   time: 2011-02-18 00:51:48
 
 two:
-  name: MyString
-  description: MyText
+  name: ILC meeting
+  description: The weekly meeting of ILC
   url: MyString
   time: 2011-02-18 00:51:48
