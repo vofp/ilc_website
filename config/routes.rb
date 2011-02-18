@@ -1,4 +1,13 @@
 IlcWebsite::Application.routes.draw do
+  
+	resources :users
+	
+	resources :events
+
+  resources :projects
+
+  resources :blogs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

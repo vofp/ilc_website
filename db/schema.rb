@@ -10,13 +10,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110218065817) do
+ActiveRecord::Schema.define(:version => 20110218085148) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "name"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
     t.text     "description"
+    t.string   "email"
+    t.string   "hashed_password"
   end
 
 end

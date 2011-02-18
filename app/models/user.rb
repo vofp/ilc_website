@@ -1,6 +1,10 @@
 require 'digest/sha1'
 class User < ActiveRecord::Base
 	attr_accessor :password
+	
+	has_many :blogs
+	has_and_belongs_to_many :projects
+	has_many :activities, :through => :projects, :source => :events
 
 	validates :name, :presence => true, :uniqueness => true
 	validates :email, :presence => true, :uniqueness => true
