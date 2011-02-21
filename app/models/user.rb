@@ -2,7 +2,7 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 	attr_accessor :password
 	
-	has_many :blogs
+	has_many :blogs, :order => "created_at DESC"
 	has_and_belongs_to_many :projects
 	has_many :activities, :through => :projects, :source => :events
 

@@ -41,7 +41,9 @@ class BlogsController < ApplicationController
   # POST /blogs.xml
   def create
     @blog = Blog.new(params[:blog])
-
+		@blog.user_id = session[:user_id]
+		@blog.project_id = session[:project_id]
+		session[:project_id] = nil
     respond_to do |format|
       if @blog.save
         format.html { redirect_to(@blog, :notice => 'Blog was successfully created.') }
