@@ -6,10 +6,16 @@
 		<h2><%= blog.name %></h2>
 		<p><%= blog.message %></p>
 	<% end %>
+	
 </div>
 <div id="right">
 	<div class="box">
 		<h3>About <%= @project.name %></h3>
 		<p><%= @project.description %></p>
+		<br />
+		<h3>Users</h3>
+		<% @project.users.each do |user| %>
+			<%= link_to "#{user.name}, ", user %>
+		<% end %>
 	</div>
 </div>
