@@ -1,4 +1,21 @@
 class UsersController < ApplicationController
+	before_filter :authenticate, :only => [:edit, :update]  
+  def login
+		if request.post?
+    if user = User.authenticate(params[:name],params[:password])
+    	session[:user_id] = user.id
+			redirect_to root_url
+		else
+			flash[:notice] = 'Invalid login/password combination'
+    end
+		end
+  end
+
+	def logout
+		session[:user_id] = nil
+		redirect_to login_url
+	end
+
   # GET /users
   # GET /users.xml
   def index
@@ -34,7 +51,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   # POST /users
@@ -56,7 +73,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
+    @user = current_user
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

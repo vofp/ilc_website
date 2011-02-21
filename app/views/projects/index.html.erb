@@ -3,7 +3,7 @@
 	<h2><%= link_to project.name, project %></h2>
 	<p><%= project.description %></p>
 <% end %>
-
 <br />
-
-<%= link_to 'New Project', new_project_path %>
+<% if session[:user_id] %>
+	<%= link_to "Create New Project", new_project_path %>
+<% end %>
