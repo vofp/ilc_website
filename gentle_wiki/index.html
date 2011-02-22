@@ -4,11 +4,58 @@
 	<meta name="author" content="Luka Cvrk (www.solucija.com)" />
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+<<<<<<< HEAD
 	<title>OSU ILC</title>
 </head>
 <body>
 	<div class="wrap">
 		<p id="options"><a href="#">Login</a><a href="#">About</a><a href="#">Contact</a></p>
+=======
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="javascript/jquery.simplemodal.js"></script>
+	<script type="text/javascript" src="javascript/init.js"></script>
+	
+	<link type='text/css' href='style/stylesheet.css' rel='stylesheet' media='screen' />
+	<link type='text/css' href='style/basic.css' rel='stylesheet' media='screen' />
+	
+	<title>OSU ILC</title>
+	
+	
+	
+	
+	
+</head>
+<body>
+	<div id="login_form" style='display:none'>
+
+	<div id="status" align="left">
+
+	<center><h1><img src="images/key.png" align="absmiddle">&nbsp;Login</h1> 
+
+	<div id="login_response"><!-- spanner --></div> </center>
+
+	<form id="login" action="javascript:alert('success!');">
+	<input type="hidden" name="action" value="user_login">
+	<input type="hidden" name="module" value="login">
+	<label>E-Mail</label><input type="text" name="email"><br />  
+	<label>Password</label><input type="password" name="password"><br />  
+	<label>&nbsp;</label><input value="Login" name="Login" id="submit" class="big" type="submit" />
+
+	<div id="ajax_loading">
+	<img align="absmiddle" src="images/spinner.gif">&nbsp;Processing...
+	</div>
+
+	</form>
+
+	 </div>
+
+	</div>
+	
+	
+	<div class="wrap">
+   <p id="options"><a id="login_link" href="#">Login</a><a href="#">About</a><a href="#">Contact</a></p>
+>>>>>>> ad30c48c7b97e78e2d685168ac4f4599d3086583
 		<h1><a href="#">OSU ILC</a></h1>
 		<ul id="menu">
 			<li id="nav"><a href="#">Home</a></li>
@@ -63,4 +110,8 @@
 		</div>
 	</div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> ad30c48c7b97e78e2d685168ac4f4599d3086583

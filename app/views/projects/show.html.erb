@@ -1,6 +1,9 @@
 <div id="left">
 	<p id="notice"><%= notice %></p>
-	<h1><%= @project.name %></h1>
+	<h1><%= @project.name %></h1> 
+	<% if session[:user_id] != nil && !@project.users.member?(current_user) %>
+		<%= link_to "Join", join_url %>
+	<% end %>
 
 	<% @project.blogs.each do |blog| %>
 		<h2><%= blog.name %></h2>

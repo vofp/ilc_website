@@ -6,7 +6,19 @@ class ProjectsController < ApplicationController
 			format.html{ redirect_to(@project)}
 		end
 	end
+	def join
+		@project = Project.find 1
+		if session[:user_id] != nil && session[:project_id] != nil
+			@project = Project.find(session[:project_id])
+			@project.users << current_user
+			session[:project_id != nil]
+		end
 
+		respond_to do |format|
+			format.html{ redirect_to(@project)}
+		end
+
+	end
 
 	# GET /projects
   # GET /projects.xml
@@ -51,7 +63,7 @@ class ProjectsController < ApplicationController
   # POST /projects.xml
   def create
     @project = Project.new(params[:project])
-
+		@project.users << current_user
     respond_to do |format|
       if @project.save
         format.html { redirect_to(@project, :notice => 'Project was successfully created.') }

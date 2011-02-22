@@ -9,7 +9,8 @@ IlcWebsite::Application.routes.draw do
   resources :blogs
 
   root :to => "projects#main"
-
+	
+	match 'join' => 'projects#join'
   match 'login' => 'users#login'
 	match 'logout' => 'users#logout'
 	# The priority is based upon order of creation:
